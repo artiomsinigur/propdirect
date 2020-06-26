@@ -1,0 +1,14 @@
+button {
+  display: none;
+  border: none;
+  outline: none;
+}
+
+p {
+  font-size: 12px;
+
+  &:focus,
+  &:hover {
+    color: red;
+  }
+}

@@ -1,0 +1,16 @@
+html {
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 16px; //16px by default
+  line-height: 1.5; //24px
+
+  color: #000;
+  letter-spacing: 0.01em;
+}
+
+body {
+  display: block;
+  width: 100%;
+  height: 24px;
+
+  background: linear-gradient(to top, white 95%, gray 5%) repeat-y;
+}

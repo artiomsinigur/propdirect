@@ -1,0 +1,58 @@
+@mixin mobile {
+  @media (max-width: #{$mobile-width-only}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@mixin container {
+  min-width: 320px;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 640px;
+  }
+
+  @include desktop {
+    width: 960px;
+  }
+}
+
+@mixin no-list-style {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Function
+====================================== */
+// Function to calculate px to rem
+// Allows to include the px unit only
+@function rem($target) {
+  @return ($target / $font-size-base) * 1rem;
+}

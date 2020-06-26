@@ -1,0 +1,33 @@
+{
+  "name": "propdirect",
+  "version": "1.0.0",
+  "description": "Acheter votre bien directement du proprietaire sans intermediaire et sans commission.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artiom Sinigur",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-stylelint": "^13.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "stylelint": "^13.6.1",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-recess-order": "^2.0.4",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "browserslist": [
+    "defaults",
+    "maintained node versions"
+  ]
+}
