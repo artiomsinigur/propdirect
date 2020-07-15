@@ -1,0 +1,21 @@
+.new-properties {
+  .container {
+    display: grid;
+    grid-template-rows: rem(96) repeat(2, auto) rem(96);
+    grid-template-columns: $gap 1fr $gap;
+  }
+
+  &__title {
+    grid-area: 2 / 2;
+    margin-bottom: rem(72);
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-area: 3 / 2;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: $gap $gap;
+    justify-items: center;
+  }
+}

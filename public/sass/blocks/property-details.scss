@@ -1,0 +1,244 @@
+.details {
+  .container {
+    display: grid;
+    grid-template-rows: 1fr rem(96);
+    grid-template-columns: $gap 1fr $gap;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-areas:
+      "gallery gallery gallery"
+      "shape shape shape"
+      "price price price"
+      ". rating ."
+      ". title ."
+      ". info ."
+      ". spec .";
+    grid-template-columns: $gap 1fr $gap;
+    grid-column: 1 / -1;
+  }
+
+  &__gallery {
+    grid-area: gallery;
+    border-bottom: 6px solid $color-yellow;
+  }
+
+  &--shape {
+    grid-area: shape;
+    width: 100%;
+    height: rem(24);
+    background-color: $color-yellow;
+  }
+
+  &__price {
+    grid-area: price;
+    padding-top: rem(48);
+    background-color: $color-yellow;
+  }
+
+  &__price-amount {
+    @include fluid-type(font-size, 375px, 1200px, 48px, 60px);
+    @include fluid-type(line-height, 375px, 1200px, 1, 0.8);
+    display: block;
+    padding: 0 $gap;
+    margin-bottom: rem(24);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__price-btn {
+    width: 100%;
+  }
+
+  &__rating {
+    grid-area: rating;
+  }
+
+  &__info {
+    grid-area: info;
+  }
+
+  &__title {
+    grid-area: title;
+    padding: $gap 0;
+    font-size: rem(36);
+    line-height: 1.3333;
+    border-bottom: 1px solid $color-gray02;
+  }
+
+  &__spec {
+    grid-area: spec;
+    min-height: 400px;
+
+    table {
+      width: 100%;
+
+      tr td {
+        padding: rem(12) 0;
+      }
+
+      tr:not(:last-child) td {
+        border-bottom: 1px solid $color-gray02;
+      }
+    }
+  }
+}
+
+// Gallery
+.gallery {
+  display: flex;
+
+  &__large-img {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      image-rendering: auto;
+    }
+
+    @supports (object-fit: cover) {
+      img {
+        min-height: 100%;
+        max-height: rem(540);
+        object-fit: cover;
+      }
+    }
+  }
+
+  /* stylelint-disable-next-line a11y/no-display-none */
+  &__thumbnails {
+    display: none;
+    max-width: 30%;
+  }
+
+  &__thumb {
+    height: 50%;
+
+    img {
+      width: 100%;
+      height: auto;
+      image-rendering: auto;
+    }
+
+    @supports (object-fit: cover) {
+      img {
+        min-height: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// Rating
+.rating {
+  display: flex;
+  padding: $gap 0;
+
+  &__avatar {
+    width: rem(84);
+    height: rem(84);
+    margin-right: $gap-sm;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__author {
+    margin-bottom: rem(6);
+    font-size: rem(18);
+    line-height: 1.3333;
+    color: inherit;
+  }
+
+  &__stars {
+    display: flex;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    fill: $color-red;
+  }
+
+  &__reviews {
+    padding-left: 6px;
+    font-size: rem(14);
+    line-height: 1.7142;
+    color: $color-gray05;
+  }
+}
+
+// Info block
+.info {
+  &__column {
+    margin-bottom: $gap;
+  }
+
+  &__title {
+    @include fluid-type(font-size, 375px, 1200px, 20px, 24px);
+    @include fluid-type(line-height, 375px, 1200px, 1.2, 1);
+    margin-bottom: rem(12);
+    color: inherit;
+  }
+
+  &__text {
+    @include fluid-type(font-size, 375px, 1200px, 16px, 18px);
+    @include fluid-type(line-height, 375px, 1200px, 1.5, 1.3333);
+  }
+}
+
+@include tablet {
+  .gallery {
+    &__thumbnails {
+      display: block;
+    }
+  }
+
+  .info {
+    &__columns {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@include desktop-large {
+  .details {
+    &__grid {
+      grid-template-areas:
+        ". gallery gallery gallery ."
+        ". . . shape ."
+        ". title . price ."
+        ". info . price ."
+        ". spec . rating ."
+        ". spec . . .";
+      grid-template-columns: $gap 1fr $gap rem(340) $gap;
+    }
+
+    &--shape {
+      grid-row: 1;
+      align-self: end;
+    }
+
+    &__price {
+      align-self: start;
+      padding-top: rem(72);
+    }
+  }
+
+  .gallery {
+    &__thumbnails {
+      max-width: rem(340);
+    }
+  }
+}

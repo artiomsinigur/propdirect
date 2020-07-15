@@ -1,0 +1,66 @@
+.hero {
+  position: relative;
+  margin-bottom: rem(320);
+  background-color: $color-black;
+
+  &__title {
+    @include fluid-type(font-size, 375px, 1200px, 32px, 46px);
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    z-index: 1;
+    color: $color-white;
+    text-shadow: $shadow-title-hero;
+    transform: translate(-20%, -50%);
+  }
+
+  &__img {
+    height: calc(100vh - 50px);
+    background: url(../../img/hero@x1.jpg) no-repeat center center;
+    background-size: cover;
+    opacity: 0.7;
+  }
+
+  // Search bar
+  &__search-bar {
+    position: absolute;
+    top: calc(100% - 48px);
+    right: 0;
+    left: 0;
+  }
+}
+
+@include tablet {
+  .hero {
+    margin-bottom: rem(48);
+
+    &__img {
+      height: calc(100vh - 120px);
+      background: url(../../img/hero@x2.jpg) no-repeat center center;
+      background-size: cover;
+    }
+
+    &__title {
+      padding-right: 30%;
+    }
+
+    &__search-bar {
+      top: calc(100% - 104px); // 96
+    }
+  }
+}
+
+@include desktop-large {
+  .hero {
+    &__img {
+      background: url(../../img/hero@x3.jpg) no-repeat center center;
+      background-size: cover;
+    }
+
+    &__search-bar {
+      top: calc(100% - 116px);
+      right: 10%;
+      left: 10%;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.card-sm {
+  display: inline-grid;
+  grid-template-areas:
+    "label header"
+    ". header"
+    ". body";
+  grid-template-rows: minmax(120px, auto) auto auto;
+  grid-template-columns: rem(30) rem(235);
+
+  // label
+  &__label {
+    position: relative;
+    grid-area: label;
+    font-size: rem(18);
+    font-weight: 500;
+    line-height: 1.6;
+    color: $color-white;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $color-green;
+
+    // Fallback
+    -ms-writing-mode: tb;
+    writing-mode: tb;
+
+    &::after {
+      position: absolute;
+      bottom: -30px;
+      width: 0;
+      height: 0;
+      content: "";
+      border-top: 15px solid $color-green;
+      border-right: 15px solid $color-green;
+      border-bottom: 15px solid transparent;
+      border-left: 15px solid transparent;
+    }
+  }
+
+  @supports (writing-mode: vertical-rl) {
+    &__label {
+      writing-mode: vertical-rl;
+    }
+  }
+
+  // header
+  &__header {
+    grid-area: header;
+
+    height: rem(260);
+    background-color: $color-gray04;
+    box-shadow: $shadow-03;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    image-rendering: auto;
+  }
+
+  @supports (object-fit: cover) {
+    &__img {
+      height: rem(260);
+      object-fit: cover;
+    }
+  }
+
+  // body
+  &__body {
+    grid-area: body;
+    padding: $gap-sm;
+    background-color: $color-white;
+    box-shadow: $shadow-03;
+  }
+
+  &__category {
+    margin: 0;
+    font-size: rem(14);
+    line-height: 1.7142;
+    color: $color-gray04;
+  }
+
+  &__title {
+    font-size: rem(20);
+    line-height: 1.2;
+  }
+
+  &__price {
+    font-size: rem(22);
+    font-weight: 700;
+    line-height: 1.0909;
+  }
+}

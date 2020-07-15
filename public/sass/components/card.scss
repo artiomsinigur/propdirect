@@ -1,0 +1,177 @@
+.card {
+  display: inline-grid;
+  grid-template-areas:
+    "header"
+    "body";
+  grid-template-rows: rem(260) 1fr;
+  grid-template-columns: minmax(280px, 320px);
+  box-shadow: $shadow-03;
+
+  &__header {
+    grid-area: header;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    image-rendering: auto;
+  }
+
+  @supports (object-fit: cover) {
+    &__img {
+      min-height: 100%;
+      max-height: rem(320);
+      object-fit: cover;
+    }
+  }
+
+  &__body {
+    grid-area: body;
+    padding: $gap-sm;
+  }
+
+  &__category {
+    @include fluid-type(font-size, 375px, 1200px, 16px, 18px);
+    @include fluid-type(line-height, 375px, 1200px, 1.5, 1.3333);
+    display: block;
+    margin-bottom: rem(12);
+    color: $color-gray04;
+  }
+
+  &__title {
+    @include fluid-type(font-size, 375px, 1200px, 24px, 26px);
+    @include fluid-type(line-height, 375px, 1200px, 1, 0.923);
+    grid-area: title;
+    margin-bottom: 0;
+  }
+
+  &__address {
+    @include fluid-type(font-size, 375px, 1200px, 16px, 18px);
+    @include fluid-type(line-height, 375px, 1200px, 1.5, 1.3333);
+    display: block;
+    grid-area: address;
+    margin-bottom: rem(12);
+  }
+
+  &__price {
+    @include fluid-type(font-size, 375px, 1200px, 34px, 40px);
+    @include fluid-type(line-height, 375px, 1200px, 1.4117, 1.2);
+    display: block;
+    grid-area: price;
+    margin-bottom: rem(12);
+    color: $color-red;
+  }
+
+  &__characteristics {
+    grid-area: characteristics;
+    padding: rem(12) 0;
+    margin-bottom: rem(24);
+    color: $color-gray04;
+    border-top: 1px solid $color-gray02;
+    border-bottom: 1px solid $color-gray02;
+  }
+
+  &__btn {
+    grid-area: button;
+    width: 100%;
+  }
+
+  .characteristics {
+    &__list {
+      @include no-list-style;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    &__icon::before {
+      position: absolute;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      content: "";
+    }
+
+    &__icon--bedrooms::before {
+      background: url("../../img/sprites_material/sprite-characteristics.svg")
+        no-repeat center;
+      background-position-y: 2px;
+      background-size: 100%;
+    }
+
+    &__icon--bathrooms::before {
+      background: url("../../img/sprites_material/sprite-characteristics.svg")
+        no-repeat center;
+      background-position-y: -32px;
+      background-size: 100%;
+    }
+
+    &__icon--toilet-rooms::before {
+      background: url("../../img/sprites_material/sprite-characteristics.svg")
+        no-repeat center;
+      background-position-y: -66px;
+      background-size: 100%;
+    }
+
+    &__icon--living-area::before {
+      background: url("../../img/sprites_material/sprite-characteristics.svg")
+        no-repeat center;
+      background-position-y: -100px;
+      background-size: 100%;
+    }
+
+    span {
+      font-size: rem(16);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  }
+}
+
+// Landscape card
+@include tablet {
+  .card--landscape.card {
+    display: grid;
+    grid-template-areas: "header body";
+    grid-template-rows: minmax(260px, 1fr);
+    grid-template-columns: rem(280px) 1fr;
+
+    &__body {
+      display: grid;
+      grid-template-areas:
+        "category characteristics"
+        "title characteristics"
+        "address characteristics"
+        "price characteristics"
+        "button characteristics";
+      grid-template-rows: repeat(5, auto);
+      grid-template-columns: 1fr minmax(145px, auto);
+      padding: $gap;
+    }
+
+    &__characteristics {
+      padding-left: $gap;
+      margin-bottom: 0;
+      border: none;
+      border-left: 1px solid $color-gray02;
+    }
+
+    &__btn {
+      align-self: end;
+      justify-self: start;
+      width: auto;
+    }
+
+    .characteristics {
+      &__list {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+    }
+  }
+}

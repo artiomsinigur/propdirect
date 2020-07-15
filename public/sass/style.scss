@@ -1,6 +1,25 @@
 @import "variables";
 @import "mixins";
+// Global
 @import "global/scaffolding";
 @import "global/forms";
-
-// @import "blocks/page-header";
+@import "global/buttons";
+@import "global/typography";
+// Blocks
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/search-bar";
+@import "blocks/whyus";
+@import "blocks/sold";
+@import "blocks/new-properties";
+@import "blocks/testimonials";
+@import "blocks/contact-us";
+@import "blocks/additional-info";
+@import "blocks/footer";
+@import "blocks/results";
+@import "blocks/property-details";
+// Components
+@import "components/card";
+@import "components/card-sm";
+@import "components/dropdown";
+@import "components/accordion";

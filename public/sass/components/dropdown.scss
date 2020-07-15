@@ -1,0 +1,28 @@
+/* stylelint-disable-next-line a11y/no-display-none */
+.dropdown {
+  position: relative;
+  display: none;
+
+  &__content {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    z-index: 10;
+    min-width: 350px;
+    max-height: 70vh;
+    padding: $gap;
+    overflow-y: auto;
+
+    background-color: $color-white;
+    box-shadow: $shadow-02;
+    will-change: transform;
+  }
+
+  &__menu {
+    @include no-list-style;
+  }
+
+  &--expanded {
+    display: block;
+  }
+}

@@ -1,0 +1,26 @@
+.sold {
+  background-color: $color-green-light;
+
+  .container {
+    display: grid;
+    grid-template-rows: rem(96) repeat(2, auto) rem(96);
+    grid-template-columns: $gap 1fr $gap;
+  }
+
+  &__title {
+    grid-row: 2;
+    grid-column: 2;
+    margin-bottom: rem(72);
+    color: $color-green;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+    gap: $gap $gap;
+    grid-row: 3;
+    grid-column: 2;
+    justify-items: center;
+  }
+}

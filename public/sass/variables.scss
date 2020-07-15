@@ -1,38 +1,45 @@
 //Media queries
-$tablet-width-small: 500px;
-$tablet-width-large: 768px;
+$mobile-width-large: 500px;
+$tablet-width: 768px;
+$desktop-width-small: 1000px;
 $desktop-width-large: 1200px;
 
 /* Colors
 ====================================== */
 $color-primary: #883bc8;
-$color-secondary: #6b7886;
-$color-success: #00ba82;
-$color-warning: #f7cd44;
-$color-danger: $color-primary;
-
-$color-white: #fff;
-$color-black: #0d0d0d;
-$color-gray-light: #f5f5f5;
-$color-gray: #d0d0d0;
-$color-gray-dark: #9c9c9c;
-$color-gray-darkest: #3b403e;
 $color-orange: #ed9638;
 $color-yellow: #f6ec44;
 $color-red: #ec4959;
 $color-blue: #0fc0f3;
+$color-green: #55d052;
+$color-green-light: #f6f9f4;
+
+$color-white: #fff;
+$color-gray01: #f5f5f5;
+$color-gray02: #eaeaea;
+$color-gray03: #d0d0d0;
+$color-gray04: #9c9c9c;
+$color-gray05: #3b403e;
+$color-black: #0d0d0d;
 
 $color-bg: $color-white;
+
+/* Gap
+====================================== */
+$gap: 1.5rem; // 24px
+$gap-sm: 1rem; // 16px
+$gap-lg: 2.25rem; // 36px
 
 /* Typography
 ====================================== */
 $font-size-base: 16px;
 // $font-size-md: ($font-size-base * 1.15);
 // $font-size-lg: ($font-size-base * 1.3);
-// $line-height-base: 1.4;
+$font-size-lg: 20px;
+$line-height: 1.5;
 
-$font-family-primary: "Open Sans", arial, sans-serif;
-$font-family-secondary: "Bebas Neue", arial, sans-serif;
+$font-family: roboto, -apple-system, "Segoe UI", oxygen, ubuntu, cantarell,
+  "Open Sans", "Helvetica Neue", sans-serif;
 
 /* Transition
 ====================================== */
@@ -44,3 +51,17 @@ $zindex-dropdown: 100;
 $zindex-sticky: 110;
 $zindex-fixed: 120;
 $zindex-modal: 130;
+
+/* Box Shadows
+====================================== */
+$shadow-01: 0 2px 4px rgba($color-black, 0.1);
+$shadow-02: 0 4px 8px rgba($color-black, 0.1);
+$shadow-03: 0 8px 16px rgba($color-black, 0.1);
+$shadow-04: 0 16px 24px rgba($color-black, 0.1);
+$shadow-05: 0 24px 36px rgba($color-black, 0.1);
+$shadow-title-hero: 0 4px 8px rgba($color-black, 0.5);
+
+/* Transitions
+====================================== */
+$transition-2s: .2s ease-in-out;
+$transition-3s: .3s ease-in-out;

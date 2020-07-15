@@ -1,0 +1,181 @@
+.testimonials {
+  background-color: $color-primary;
+
+  .container {
+    display: grid;
+    grid-template-rows: rem(96) 1fr rem(96);
+    grid-template-columns: $gap 1fr $gap;
+  }
+
+  &__grid {
+    grid-area: 2 / 2;
+  }
+
+  &__title,
+  &__subtitle {
+    color: $color-white;
+    text-align: center;
+  }
+
+  &__subtitle strong {
+    font-size: 150%;
+  }
+
+  // Styling card
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: rem(300);
+    padding: $gap;
+    margin: 0 auto;
+    margin-bottom: $gap;
+
+    text-indent: 0;
+    background-color: $color-white;
+    border-left: none;
+    box-shadow: $shadow-03;
+  }
+
+  &__text {
+    margin-bottom: 0;
+    font-size: rem(16);
+    line-height: 1.5;
+    text-indent: 3px;
+
+    &::before,
+    &::after {
+      position: relative;
+      font-size: rem(30);
+      line-height: 0;
+      color: $color-gray03;
+    }
+
+    &::before {
+      top: 10px;
+      left: -3px;
+      content: "“";
+    }
+
+    &::after {
+      top: 10px;
+      right: 0;
+      content: "”";
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    padding-top: rem(12);
+    margin-top: rem(12);
+    border-top: 1px solid $color-gray02;
+  }
+
+  &__avatar {
+    width: 72px;
+    height: 72px;
+    margin-right: rem(24);
+    background-color: #ddd;
+    border-radius: 50%;
+  }
+}
+
+@include tablet {
+  .testimonials {
+    background-color: $color-white;
+
+    .container {
+      grid-template-rows: auto;
+    }
+
+    &__title,
+    &__subtitle {
+      color: $color-primary;
+      text-align: left;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-areas:
+        ". . . . ."
+        ". . . title ."
+        ". . . subtitle ."
+        ". card1 . . ."
+        ". card1 card2 card2 ."
+        ". card3 card3 card4 ."
+        ". . . card4 ."
+        ". . . . .";
+      grid-template-rows:
+        rem(96) auto auto rem(48) repeat(2, minmax(240px, auto))
+        rem(48) rem(96);
+      grid-template-columns: 3fr rem(288) rem(48) rem(288) 1fr;
+      gap: $gap $gap;
+    }
+
+    &__bg {
+      grid-row: 1 / -1;
+      grid-column: 1 / span 3;
+      background-color: $color-primary;
+    }
+
+    &__title {
+      grid-area: title;
+      margin-bottom: 0;
+    }
+
+    &__subtitle {
+      grid-area: subtitle;
+      margin-bottom: 0;
+    }
+
+    &__card {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    &__card:nth-of-type(1) {
+      grid-area: card1;
+    }
+
+    &__card:nth-of-type(2) {
+      grid-area: card2;
+    }
+
+    &__card:nth-of-type(3) {
+      grid-area: card3;
+    }
+
+    &__card:nth-of-type(4) {
+      grid-area: card4;
+    }
+  }
+}
+
+@include desktop-large {
+  .testimonials {
+    &__grid {
+      grid-template-areas:
+        ". . . . . . ."
+        ". title . . card2 card2 ."
+        ". subtitle . card1 card2 card2 ."
+        ". . . card1 card4 . ."
+        ". . card3 card3 card4 . ."
+        ". . card3 card3 . . ."
+        ". . . . . . .";
+      grid-template-rows: rem(96) repeat(5, minmax(96px, auto)) rem(96);
+      grid-template-columns: 1fr auto rem(48) rem(288) rem(288) rem(48) 1fr;
+    }
+
+    &__bg {
+      grid-row: 1 / -1;
+      grid-column: 1 / span 4;
+    }
+
+    &__title,
+    &__subtitle {
+      color: $color-white;
+    }
+  }
+}

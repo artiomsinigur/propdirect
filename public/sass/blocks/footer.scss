@@ -1,0 +1,76 @@
+.page-footer {
+  background-color: $color-black;
+
+  .container {
+    display: grid;
+    grid-template-rows: rem(96);
+    grid-template-columns: $gap 1fr $gap;
+  }
+
+  &__list {
+    grid-area: 2 / 2;
+    border-bottom: 1px solid $color-gray05;
+
+    ul {
+      @include no-list-style;
+    }
+
+    a,
+    span {
+      @include fluid-type(font-size, 375px, 1200px, 14px, 16px);
+      @include fluid-type(line-height, 375px, 1200px, 1.7142, 1.5);
+      color: $color-gray03;
+    }
+  }
+
+  &__copyright {
+    grid-area: 3 / 2;
+    padding: rem(48) 0;
+    color: $color-gray03;
+    text-align: center;
+
+    a,
+    p {
+      @include fluid-type(font-size, 375px, 1200px, 14px, 16px);
+      @include fluid-type(line-height, 375px, 1200px, 1.7142, 1.5);
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: rem(48);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: rem(24);
+    color: $color-yellow;
+  }
+}
+
+@include tablet {
+  .page-footer {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: $gap;
+    }
+  }
+}
+
+@include desktop-large {
+  .page-footer {
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+
+      a,
+      span {
+        @include fluid-type(line-height, 375px, 1200px, 3.4284, 3);
+      }
+    }
+
+    &__item {
+      margin-bottom: rem(96);
+    }
+  }
+}

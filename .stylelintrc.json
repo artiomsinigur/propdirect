@@ -9,14 +9,30 @@
     "indentation": 2,
     "declaration-empty-line-before": null,
     "number-leading-zero": null,
+    "declaration-colon-newline-after": null,
     "at-rule-no-unknown": [
       true,
       {
-        "ignoreAtRules": ["include", "mixin", "function", "return"]
+        "ignoreAtRules": [
+          "include",
+          "mixin",
+          "function",
+          "return",
+          "extend",
+          "each",
+          "if"
+        ]
       }
     ],
-    "a11y/media-prefers-reduced-motion": true,
+    "a11y/media-prefers-reduced-motion": null,
     "a11y/no-outline-none": true,
-    "a11y/selector-pseudo-class-focus": true
+    "a11y/selector-pseudo-class-focus": true,
+    "a11y/font-size-is-readable": true,
+    "a11y/line-height-is-vertical-rhythmed": null,
+    "a11y/no-display-none": true,
+    "a11y/no-obsolete-attribute": true,
+    "a11y/no-obsolete-element": true,
+    "a11y/no-spread-text": true,
+    "a11y/no-text-align-justify": true
   }
 }

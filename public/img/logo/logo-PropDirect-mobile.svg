@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 169.1 144" style="enable-background:new 0 0 169.1 144;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#Adobe_OpacityMaskFilter);}
+	.st1{fill:#FFFFFF;}
+	.st2{mask:url(#SVGID_1_);}
+	.st3{fill:#D0D0D0;}
+	.st4{fill:#F6EC44;}
+	.st5{fill:#9D3EEC;}
+	.st6{fill:#0D0D0D;}
+	.st7{filter:url(#Adobe_OpacityMaskFilter_1_);}
+	.st8{mask:url(#SVGID_2_);}
+</style>
+<image style="overflow:visible;" width="620" height="138" xlink:href="A3F382D6.jpg"  transform="matrix(1 0 0 1 -394.9697 -506.9844)">
+</image>
+<g>
+	<g>
+		<text transform="matrix(1 0 0 1 506.3262 -445.9703)"><tspan x="0" y="0" class="st5" style="font-family:'Roboto-Medium'; font-size:94.6179px;">Prop</tspan><tspan x="200.9" y="0" class="st6" style="font-family:'Roboto-Medium'; font-size:94.6179px;">Direct</tspan></text>
+	</g>
+	<g>
+		<defs>
+			<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="603.4" y="-759.7" width="173.4" height="167.7">
+				
+					<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
+				<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+				<feBlend  in="source" in2="back" mode="normal"/>
+			</filter>
+		</defs>
+		<mask maskUnits="userSpaceOnUse" x="603.4" y="-759.7" width="173.4" height="167.7" id="SVGID_1_">
+			<g class="st0">
+				<path class="st1" d="M641.8-577.2v-74.6c0,0,5.2-40.8,48.6-41.3c43.4-0.6,128,0,128,0v113.6L641.8-577.2z"/>
+			</g>
+		</mask>
+		<g class="st2">
+			<g>
+				<g>
+					<path class="st3" d="M630.9-666.2c0-42.9,34.8-77.7,77.7-77.7c14.7,0,28.5,4.1,40.2,11.2c-15.3-16.6-37.3-27-61.6-27
+						c-46.3,0-83.9,37.5-83.9,83.9c0,45.7,36.5,82.8,81.9,83.8C653.8-601.9,630.9-631.3,630.9-666.2z"/>
+				</g>
+				<g>
+					
+						<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 678.6061 305.989)" class="st4" cx="708.7" cy="-666.2" rx="68.2" ry="68.2"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<path class="st5" d="M689.5-617.4c-5.9,0-11.2-0.7-15.8-2.2c-4.6-1.4-8.5-3.5-11.7-6.2c-3.2-2.7-5.6-6-7.2-9.9
+				c-1.7-3.9-2.5-8.4-2.5-13.3c0-4.7,0.8-9,2.5-13c1.7-4,4.1-7.4,7.2-10.3c3.2-2.9,7.1-5.1,11.7-6.8c4.6-1.6,9.9-2.4,15.8-2.4h39
+				v102h-17.7v-37.9H689.5z M710.8-667.2h-21.3c-3.4,0-6.3,0.5-8.8,1.5c-2.5,1-4.5,2.4-6.1,4.1c-1.6,1.7-2.7,3.7-3.5,5.8
+				c-0.7,2.2-1.1,4.5-1.1,6.9c0,2.5,0.4,4.8,1.1,7c0.7,2.1,1.9,4,3.5,5.5c1.6,1.5,3.6,2.7,6.1,3.6c2.5,0.8,5.4,1.3,8.8,1.3h21.3
+				V-667.2z"/>
+		</g>
+		<path class="st6" d="M811.5-653c-2.2-6-5.4-11.1-9.4-15.3c-4-4.2-8.9-7.5-14.5-9.8c-5.6-2.3-11.9-3.4-18.7-3.4h-30.1v7.4
+			l17.7,17.7v-10.8h12.4c9.2,0,16.1,2.9,20.9,8.8c4.8,5.8,7.2,14.3,7.2,25.4v5.2c0,5.3-0.6,10.1-1.8,14.4c-1.2,4.2-3,7.8-5.4,10.8
+			c-2.4,2.9-5.4,5.2-9.1,6.8c-3.6,1.6-7.9,2.3-12.7,2.3h-11.6v-10.9l-17.7,17.7v7.4h29.3c7.1,0,13.5-1.1,19.2-3.4
+			c5.8-2.3,10.7-5.5,14.8-9.7c4.1-4.2,7.2-9.3,9.5-15.2c2.2-6,3.3-12.6,3.3-20v-5C814.9-640.3,813.7-647,811.5-653z"/>
+		<polygon class="st5" points="738.8,-656.4 764.7,-630.5 738.8,-604.6 		"/>
+		<path class="st5" d="M641.8-651.7l-17.6,17.6v81.6c5.6-2.7,11.5-5.2,17.6-7.5V-651.7z"/>
+		<path class="st5" d="M843-627.9l-17.6-17.6v85.1c6.1,2.3,12,4.8,17.6,7.5V-627.9z"/>
+		<path class="st5" d="M734-575.7c49.2,0,93.5,12.1,124.6,31.4c-22.8-26.5-70-44.8-124.6-44.8c-54.6,0-101.9,18.2-124.6,44.8
+			C640.5-563.7,684.8-575.7,734-575.7z"/>
+	</g>
+</g>
+<g>
+	<g>
+		<defs>
+			<filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="17.7" y="14.3" width="97.3" height="94">
+				
+					<feColorMatrix  type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" color-interpolation-filters="sRGB" result="source"/>
+				<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+				<feBlend  in="source" in2="back" mode="normal"/>
+			</filter>
+		</defs>
+		<mask maskUnits="userSpaceOnUse" x="17.7" y="14.3" width="97.3" height="94" id="SVGID_2_">
+			<g class="st7">
+				<path class="st1" d="M39.2,116.6V74.8c0,0,2.9-22.9,27.3-23.2s71.8,0,71.8,0v63.7L39.2,116.6z"/>
+			</g>
+		</mask>
+		<g class="st8">
+			<g>
+				<g>
+					<path class="st3" d="M33.1,66.7c0-24.1,19.5-43.6,43.6-43.6c8.3,0,16,2.3,22.6,6.3c-8.6-9.3-20.9-15.1-34.6-15.1
+						c-26,0-47,21.1-47,47c0,25.6,20.5,46.4,45.9,47C46,102.8,33.1,86.2,33.1,66.7z"/>
+				</g>
+				<g>
+					
+						<ellipse transform="matrix(0.9239 -0.3827 0.3827 0.9239 -19.6895 34.4398)" class="st4" cx="76.7" cy="66.7" rx="38.2" ry="38.2"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<path class="st5" d="M66,94.1c-3.3,0-6.3-0.4-8.9-1.2c-2.6-0.8-4.8-2-6.5-3.5c-1.8-1.5-3.1-3.4-4.1-5.6c-0.9-2.2-1.4-4.7-1.4-7.5
+				c0-2.6,0.5-5,1.4-7.3c0.9-2.2,2.3-4.2,4.1-5.8c1.8-1.6,4-2.9,6.5-3.8c2.6-0.9,5.5-1.4,8.9-1.4h21.9v57.2h-9.9V94.1H66z
+				 M77.9,66.1H66c-1.9,0-3.6,0.3-4.9,0.8c-1.4,0.6-2.5,1.3-3.4,2.3c-0.9,1-1.5,2-1.9,3.3c-0.4,1.2-0.6,2.5-0.6,3.8
+				c0,1.4,0.2,2.7,0.6,3.9c0.4,1.2,1.1,2.2,1.9,3.1c0.9,0.9,2,1.5,3.4,2s3,0.7,4.9,0.7h11.9V66.1z"/>
+		</g>
+		<path class="st6" d="M134.4,74.1c-1.3-3.4-3-6.2-5.3-8.6c-2.3-2.4-5-4.2-8.1-5.5c-3.2-1.3-6.6-1.9-10.5-1.9H93.6v4.1l9.9,9.9v-6.1
+			h7c5.1,0,9,1.6,11.7,4.9c2.7,3.3,4,8,4,14.2v2.9c0,3-0.3,5.7-1,8.1c-0.7,2.4-1.7,4.4-3,6c-1.3,1.6-3,2.9-5.1,3.8
+			c-2,0.9-4.4,1.3-7.1,1.3h-6.5v-6.1l-9.9,9.9v4.1H110c4,0,7.5-0.6,10.8-1.9c3.2-1.3,6-3.1,8.3-5.5c2.3-2.4,4.1-5.2,5.3-8.5
+			c1.2-3.3,1.9-7.1,1.9-11.2v-2.8C136.3,81.2,135.7,77.5,134.4,74.1z"/>
+		<polygon class="st5" points="93.6,72.2 108.1,86.7 93.6,101.3 		"/>
+		<path class="st5" d="M39.2,74.8l-9.9,9.9v45.8c3.1-1.5,6.4-2.9,9.9-4.2V74.8z"/>
+		<path class="st5" d="M152.1,88.2l-9.9-9.9v47.7c3.4,1.3,6.7,2.7,9.9,4.2V88.2z"/>
+		<path class="st5" d="M90.9,117.4c27.6,0,52.4,6.8,69.9,17.6c-12.8-14.9-39.3-25.1-69.9-25.1c-30.6,0-57.1,10.2-69.9,25.1
+			C38.5,124.2,63.3,117.4,90.9,117.4z"/>
+	</g>
+</g>
+</svg>

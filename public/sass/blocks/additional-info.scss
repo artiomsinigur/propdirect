@@ -1,0 +1,71 @@
+.additional-info {
+  .container {
+    display: grid;
+    grid-template-rows: $gap 1fr $gap;
+    grid-template-columns: $gap 1fr $gap;
+  }
+
+  &__list {
+    @include no-list-style;
+    display: block;
+    grid-area: 2 / 2;
+    text-align: center;
+  }
+
+  &__item {
+    padding: rem(24) 0;
+    font-size: rem(14);
+    line-height: 1.7142;
+
+    span {
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+      margin-left: 30px;
+      color: $color-white;
+      background-color: $color-green;
+      border-radius: 4px;
+
+      &::before {
+        position: absolute;
+        left: -30px;
+        width: 24px;
+        height: 24px;
+        content: "";
+        background: url("../../img/sprites_material/sprite_additional-info.svg")
+          no-repeat center top;
+        background-position: -1px 0;
+      }
+    }
+
+    &--seminar span::before {
+      background-position-y: -26px;
+    }
+
+    &--video span::before {
+      background-position-y: -52px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    border-bottom: 1px solid $color-gray02;
+  }
+}
+
+@include tablet {
+  .additional-info {
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      flex: 0 1 33.3333%;
+      background-color: $color-gray01;
+    }
+
+    &__item:not(:last-child) {
+      border: none;
+      border-right: 1px solid $color-gray02;
+    }
+  }
+}

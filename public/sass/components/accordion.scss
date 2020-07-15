@@ -1,0 +1,70 @@
+.accordion {
+  &__heading {
+    @include fluid-type(font-size, 375px, 1200px, 18px, 20px);
+    @include fluid-type(line-height, 375px, 1200px, 1.3333, 1.2);
+    margin-bottom: 0;
+    font-size: 20px;
+
+    button {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: $gap-sm;
+
+      background-color: $color-gray02;
+      border: none;
+
+      &:hover {
+        background-color: $color-gray03;
+      }
+
+      &:focus {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+      }
+
+      .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        transition: top $transition-3s;
+      }
+
+      .icon.active {
+        top: 24px;
+      }
+    }
+  }
+
+  &__card:not(:last-child) button {
+    border-bottom: 1px solid $color-white;
+  }
+
+  &__icons {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+
+  &__panel {
+    max-height: 0;
+    padding: 0 $gap-sm;
+    overflow: hidden;
+    opacity: 0;
+    transition: all $transition-3s;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__panel.show {
+    max-height: 300px;
+    padding: $gap-sm;
+    overflow-y: auto;
+    opacity: 1;
+  }
+}

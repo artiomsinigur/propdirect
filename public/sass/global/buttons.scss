@@ -1,14 +1,112 @@
-button {
-  display: none;
+%base-style {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-family;
+  font-weight: 500;
+  text-transform: uppercase;
   border: none;
-  outline: none;
-}
-
-p {
-  font-size: 12px;
 
   &:focus,
   &:hover {
-    color: red;
+    text-decoration: none;
   }
+}
+
+%btn-lg-style {
+  position: relative;
+  min-height: rem(60);
+  padding: 0 2rem;
+  font-size: 18px;
+  border: 1px solid $color-primary;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.05s;
+  transition-property: background-color outline;
+}
+
+.btn-secondary,
+.btn-primary {
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 80%;
+    content: "";
+    background-color: $color-primary;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.05s;
+    transition-property: right left;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    left: -8px;
+    width: 2px;
+    content: "";
+  }
+
+  &:hover::after,
+  &:focus::after {
+    right: -8px;
+    width: 2px;
+    content: "";
+  }
+}
+
+.btn-primary {
+  @extend %btn-lg-style;
+  color: $color-white;
+  background-color: $color-primary;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+    background-color: $color-white;
+  }
+
+  &:focus {
+    border-color: transparent;
+    outline: 2px solid $color-primary;
+  }
+}
+
+.btn-secondary {
+  @extend %btn-lg-style;
+  color: $color-primary;
+  background-color: $color-white;
+  border: 1px solid $color-primary;
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-primary;
+  }
+
+  &:focus {
+    color: $color-primary;
+    background-color: $color-white;
+    border-color: transparent;
+    outline: 2px solid $color-primary;
+    outline-offset: 0;
+  }
+}
+
+.btn {
+  @extend %base-style;
+}
+
+.btn-sm {
+  @extend %base-style;
+  min-height: rem(48);
+  padding: 0 1.5rem;
+  font-size: 15px;
 }
