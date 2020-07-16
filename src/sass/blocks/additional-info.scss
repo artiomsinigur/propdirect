@@ -22,6 +22,8 @@
       display: inline-block;
       padding: 0 5px;
       margin-left: 30px;
+      font-size: rem(16);
+      line-height: 1.5;
       color: $color-white;
       background-color: $color-green;
       border-radius: 4px;
@@ -32,7 +34,7 @@
         width: 24px;
         height: 24px;
         content: "";
-        background: url("../../img/sprites_material/sprite_additional-info.svg")
+        background: url("../img/sprites_material/sprite_additional-info.svg")
           no-repeat center top;
         background-position: -1px 0;
       }

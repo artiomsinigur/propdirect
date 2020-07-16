@@ -1005,7 +1005,7 @@ blockquote b {
       justify-content: flex-start;
       background: none; }
     .contact-us__subtitle {
-      background: url("../../img/contact-us-bg-small.jpg") no-repeat center top;
+      background: #883bc8 url("../img/contact-us-bg-small.jpg") no-repeat center top;
       background-size: cover; }
     .contact-us__tel {
       padding: 0;
@@ -1039,6 +1039,8 @@ blockquote b {
     display: inline-block;
     padding: 0 5px;
     margin-left: 30px;
+    font-size: 1rem;
+    line-height: 1.5;
     color: #fff;
     background-color: #55d052;
     border-radius: 4px; }
@@ -1048,7 +1050,7 @@ blockquote b {
       width: 24px;
       height: 24px;
       content: "";
-      background: url("../../img/sprites_material/sprite_additional-info.svg") no-repeat center top;
+      background: url("../img/sprites_material/sprite_additional-info.svg") no-repeat center top;
       background-position: -1px 0; }
   .additional-info__item--seminar span::before {
     background-position-y: -26px; }
