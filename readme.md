@@ -10,6 +10,7 @@ A simple service that link buyers and sellers directly without intermediaries.
   - BEM Methodology
   - Lazy loading images
 - CSS
+  - CSS Grid Layout
   - SASS
   - StyleLint
 - JavaScript ES6
