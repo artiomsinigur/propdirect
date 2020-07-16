@@ -8,15 +8,16 @@ const concat = require("gulp-concat");
 const imagemin = require("gulp-imagemin");
 const uglify = require("gulp-uglify-es").default;
 const autoprefixer = require("gulp-autoprefixer");
+const webpack = require("webpack-stream");
 // const svgSprite = require('gulp-svg-sprite');
 
 // Compile sass into css
 function style() {
   return (
-    src("./public/sass/style.scss")
+    src("./src/sass/style.scss")
       .pipe(sass().on("error", sass.logError))
       .pipe(concat("style.css"))
-      .pipe(dest("./public/css"))
+      .pipe(dest("./src/css"))
       // Stream changes to all browser
       .pipe(browserSync.stream())
   );
@@ -24,7 +25,7 @@ function style() {
 
 // Linter that helps to avoid errors and enforce conventions in styles
 function styleLint() {
-  return src("./public/sass/**/*.scss").pipe(
+  return src("./src/sass/**/*.scss").pipe(
     gulpStylelint({
       failAfterError: false,
       reporters: [
@@ -41,34 +42,42 @@ function styleLint() {
 function watcher() {
   browserSync.init({
     server: {
-      baseDir: "./public",
+      baseDir: "./",
     },
   });
-  watch("./public/sass/**/*.scss", styleLint);
-  watch("./public/sass/**/*.scss", { delay: 500 }, style);
-  watch("./public/*.html").on("change", browserSync.reload);
-  watch("./public/js/*.js").on("change", browserSync.reload);
+  watch("./src/sass/**/*.scss", styleLint);
+  watch("./src/sass/**/*.scss", { delay: 500 }, style);
+  watch("./*.html").on("change", browserSync.reload);
+  watch("./src/js/*.js").on("change", browserSync.reload);
 }
 
 // Add vendor prefixes to CSS
 function cssAutoprefixer() {
-  return src("./public/css/style.css")
+  return src("./src/css/style.css")
     .pipe(autoprefixer())
-    .pipe(dest("./public/css"));
+    .pipe(dest("./src/css"));
 }
 
 // Minify the js files
 function jsMinify() {
-  return src("./public/js/*.js")
-    .pipe(concat("production.js"))
-    .pipe(uglify())
-    .pipe(rename("production.min.js"))
-    .pipe(dest("./public/js/build"));
+  return (
+    src([
+      "./src/js/*.js",
+      "!src/js/vendor/*.js",
+      "!src/js/keycode.js",
+      "!src/js/handleMenu.js",
+    ])
+      // .pipe(webpack())
+      .pipe(concat("production.js"))
+      .pipe(uglify())
+      .pipe(rename("production.min.js"))
+      .pipe(dest("./src/js/"))
+  );
 }
 
 // Optimize the images
 function imgMinify() {
-  return src("./public/img/*")
+  return src("./src/img/*")
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
@@ -79,15 +88,15 @@ function imgMinify() {
         }),
       ])
     )
-    .pipe(dest("./public/img/compressed"));
+    .pipe(dest("./src/img/compressed"));
 }
 
 // Clean old folders and files
 function clean() {
   return del([
-    "./public/css/style.css",
-    "./public/js/build",
-    "./public/img/compressed",
+    "./src/css/style.css",
+    "./src/js/build",
+    // "./src/img/compressed",
   ]);
 }
 

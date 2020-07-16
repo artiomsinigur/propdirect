@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liste des propritiétés</title>
+    <meta
+      name="description"
+      content="Acheter votre bien directement du proprietaire sans intermediaire et sans commission."
+    />
+
+    <!-- Fonts Google -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/css/normalize.css" />
+    <link rel="stylesheet" href="src/css/nouislider.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="icon-search" viewBox="0 0 30 30">
+        <title>Icon search</title>
+        <path
+          d="M30 28.6743L19.8326 18.5069C21.4932 16.5461 22.5 14.0149 22.5 11.25C22.5 5.04638 17.4536 0 11.25 0C5.04643 0 0 5.04638 0 11.25C0 17.4536 5.04638 22.5 11.25 22.5C14.0149 22.5 16.5461 21.4932 18.5069 19.8326L28.6743 30L30 28.6743ZM11.25 20.625C6.08094 20.625 1.87502 16.4191 1.87502 11.25C1.87502 6.08094 6.08094 1.87502 11.25 1.87502C16.4191 1.87502 20.625 6.08094 20.625 11.25C20.625 16.4191 16.4191 20.625 11.25 20.625Z"
+        />
+      </symbol>
+
+      <symbol id="icon-adjust" viewBox="0 0 30 30">
+        <title>Icon adjust</title>
+        <path
+          d="M5.06016 5.33669V1.39392H3.30234V5.33669H0V12.2086H3.30234V28.606H5.06016V12.2086H8.36191V5.33669H5.06016ZM6.6041 10.4508H1.75781V7.09451H6.6041V10.4508Z"
+        />
+        <path
+          d="M15.8789 13.531V1.39392H14.1211V13.531H10.8188V20.4035H14.1211V28.606H15.8789V20.4035H19.1812V13.531H15.8789ZM17.4234 18.6457H12.5766V15.2888H17.4234V18.6457Z"
+        />
+        <path
+          d="M26.6977 5.33669V1.39392H24.9398V5.33669H21.6381V12.2086H24.9398V28.606H26.6977V12.2086H30V5.33669H26.6977ZM28.2422 10.4508H23.3959V7.09451H28.2422V10.4508Z"
+        />
+      </symbol>
+
+      <symbol id="icon-map" viewBox="0 0 30 30">
+        <title>Icon map</title>
+        <path
+          d="M29.2924 6.63657C19.1138 4.6135 19.7726 4.71915 19.5421 4.75794C19.4684 4.77024 18.565 4.95182 16.4593 5.37293C15.5766 2.82739 13.1547 0.994751 10.3125 0.994751C7.46766 0.994751 5.04387 2.83084 4.16314 5.38014L1.05023 4.76157C0.507656 4.65399 0 5.06877 0 5.62366V26.2487C0 26.668 0.296309 27.029 0.707578 27.1107C10.8002 29.1167 10.1395 28.9872 10.2064 28.9954C10.4186 29.0214 9.76272 29.1299 19.688 27.1449L28.9498 28.9857C29.4926 29.0934 30 28.678 30 28.1237V7.49866C30 7.0793 29.7037 6.71836 29.2924 6.63657V6.63657ZM10.3125 2.75256C12.9295 2.75256 15.0586 4.88163 15.0586 7.49866C15.0586 9.70665 11.5255 15.3114 10.3125 17.166C9.10084 15.3135 5.56641 9.70711 5.56641 7.49866C5.56641 4.88163 7.69553 2.75256 10.3125 2.75256V2.75256ZM1.75781 6.69434L3.8209 7.10432C3.81305 7.23481 3.80859 7.36618 3.80859 7.4986C3.80859 8.96426 4.76736 11.3295 6.73975 14.7296C7.89146 16.7149 9.02684 18.4195 9.43359 19.0199V27.0528L1.75781 25.5272V6.69434ZM11.1914 19.0199C11.5981 18.4195 12.7335 16.715 13.8853 14.7296C15.8576 11.3295 16.8164 8.96426 16.8164 7.49866C16.8164 7.36366 16.8118 7.22971 16.8036 7.09676L18.8086 6.69569V25.5281L11.1914 27.0516V19.0199ZM28.2422 27.0529L20.5664 25.5273V6.6944L28.2422 8.22001V27.0529Z"
+        />
+        <path
+          d="M10.3125 10.2526C11.831 10.2526 13.0664 9.01717 13.0664 7.49866C13.0664 5.98014 11.831 4.74475 10.3125 4.74475C8.79398 4.74475 7.55859 5.98014 7.55859 7.49866C7.55859 9.01717 8.79398 10.2526 10.3125 10.2526ZM10.3125 6.50256C10.8618 6.50256 11.3086 6.9494 11.3086 7.49866C11.3086 8.04792 10.8618 8.49475 10.3125 8.49475C9.76324 8.49475 9.31641 8.04792 9.31641 7.49866C9.31641 6.9494 9.76324 6.50256 10.3125 6.50256Z"
+        />
+      </symbol>
+
+      <symbol id="icon-list" viewBox="0 0 30 30">
+        <title>List</title>
+        <path
+          d="M7.50002 0H1.07145C0.479694 0 0 0.479694 0 1.07145V7.50002C0 8.09177 0.479694 8.57146 1.07145 8.57146H7.50002C8.09177 8.57146 8.57146 8.09177 8.57146 7.50002V1.07145C8.5714 0.479694 8.09171 0 7.50002 0ZM6.42857 6.42857H2.14283V2.14283H6.42857V6.42857Z"
+        />
+        <path
+          d="M7.50002 10.7143H1.07145C0.479694 10.7143 0 11.194 0 11.7857V18.2143C0 18.806 0.479694 19.2857 1.07145 19.2857H7.50002C8.09177 19.2857 8.57146 18.806 8.57146 18.2143V11.7857C8.5714 11.194 8.09171 10.7143 7.50002 10.7143ZM6.42857 17.1429H2.14283V12.8571H6.42857V17.1429Z"
+        />
+        <path
+          d="M7.50002 21.4285H1.07145C0.479694 21.4285 0 21.9082 0 22.5V28.9285C0 29.5203 0.479694 30 1.07145 30H7.50002C8.09177 30 8.57146 29.5203 8.57146 28.9285V22.5C8.5714 21.9082 8.09171 21.4285 7.50002 21.4285ZM6.42857 27.8571H2.14283V23.5714H6.42857V27.8571Z"
+        />
+        <path
+          d="M28.9286 3.21429H11.7857C11.1939 3.21429 10.7142 3.69399 10.7142 4.28574C10.7142 4.8775 11.1939 5.3572 11.7857 5.3572H28.9286C29.5203 5.3572 30 4.8775 30 4.28574C30 3.69399 29.5203 3.21429 28.9286 3.21429Z"
+        />
+        <path
+          d="M28.9286 13.9286H11.7857C11.1939 13.9286 10.7142 14.4083 10.7142 15.0001C10.7142 15.5919 11.194 16.0715 11.7857 16.0715H28.9286C29.5203 16.0715 30 15.5918 30 15C30 14.4083 29.5203 13.9286 28.9286 13.9286Z"
+        />
+        <path
+          d="M28.9286 24.6428H11.7857C11.1939 24.6428 10.7142 25.1225 10.7142 25.7143C10.7142 26.306 11.1939 26.7857 11.7857 26.7857H28.9286C29.5203 26.7857 30 26.306 30 25.7143C30 25.1225 29.5203 24.6428 28.9286 24.6428Z"
+        />
+      </symbol>
+    </svg>
+
+    <header class="page-header page-header--search">
+      <nav class="navbar" aria-label="Main Menu">
+        <div class="page-logo navbar__logo">
+          <a href="/">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="src/img/logo/logo-PropDirect.svg"
+              />
+              <source
+                media="(max-width: 767px)"
+                srcset="src/img/logo/logo-PropDirect-mobile.svg"
+              />
+              <img
+                src="src/img/logo/logo-PropDirect.png"
+                loading="lazy"
+                alt="Logo PropDirect"
+              />
+            </picture>
+          </a>
+        </div>
+
+        <button
+          class="navbar-btn navbar__navbar-btn"
+          id="navbarBtn"
+          type="button"
+          aria-controls="navDropdown"
+          aria-expanded="false"
+        >
+          <span class="navbar-btn__wrap">
+            <span class="navbar-btn__line navbar-btn__line--top"></span>
+            <span class="navbar-btn__line navbar-btn__line--middle"></span>
+            <span class="navbar-btn__line navbar-btn__line--bottom"></span>
+          </span>
+        </button>
+
+        <div class="navbar__dropdown" id="navDropdown">
+          <nav
+            class="nav-account navbar__nav-account"
+            aria-label="Account Menu"
+          >
+            <ul class="nav-account__menu" role="menu">
+              <li class="nav-account__item" role="menuitem">
+                <button class="btn btn-sm btn-secondary">
+                  Créer un compte
+                </button>
+              </li>
+              <li class="nav-account__item" role="menuitem">
+                <a href="/">Mon espace</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </nav>
+    </header>
+
+    <main class="search">
+      <!-- Search filters 
+      ========================================== -->
+      <aside
+        class="filters search__filters search__filters--sticky"
+        aria-labelledby="topNavbar"
+      >
+        <nav class="filters__navbar" id="topNavbar" aria-label="Menu search">
+          <form action="#">
+            <div class="filters__list" role="menubar">
+              <!-- Search -->
+              <div class="filters__item filters__search" role="menuitem">
+                <div>
+                  <div class="form-group">
+                    <label for="search" class="visuallyhidden"
+                      >Recherche de propriété</label
+                    >
+                    <input
+                      type="search"
+                      class="form-control"
+                      id="search"
+                      placeholder="Recherchez par région, ville, rue"
+                    />
+                  </div>
+                  <button class="btn btn-sm btn-secondary" type="submit">
+                    <svg class="icon icon-search" aria-label="Button search">
+                      <use xlink:href="#icon-search" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div
+                class="filters__item filters__adjust"
+                role="menuitem"
+                aria-label="Menu filters"
+              >
+                <button
+                  class="filters__btn btn btn-sm btn-secondary"
+                  type="button"
+                  data-toggle="dropdown"
+                  aria-controls="filtersAdjustMenu"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <svg class="icon icon-adjust" aria-label="Button adjust">
+                    <use xlink:href="#icon-adjust" />
+                  </svg>
+                </button>
+                <div class="dropdown filters__dropdown" id="filtersAdjustMenu">
+                  <div class="dropdown__content">
+                    <ul class="dropdown__menu" role="menu">
+                      <li class="dropdown__item" role="menuitem">
+                        <!-- Price -->
+                        <div class="price-range form-group">
+                          <label>Par prix</label>
+                          <div
+                            id="nonlinear"
+                            class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr"
+                          ></div>
+                          <div>
+                            <input
+                              type="hidden"
+                              name="min_price"
+                              id="lower-input"
+                              value=""
+                            />
+                            <input
+                              type="hidden"
+                              name="max_price"
+                              id="upper-input"
+                              value=""
+                            />
+                            <div class="nonlinear-values">
+                              <span class="example-val" id="lower-value"
+                                >500.00$</span
+                              >
+                              <span class="example-val" id="upper-value"
+                                >7000.00$</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="dropdown__item" role="menuitem">
+                        <!-- Type -->
+                        <div class="select-type form-group">
+                          <label for="selectType">Par type</label>
+                          <select
+                            name="select-type"
+                            class="form-control"
+                            id="selectType"
+                          >
+                            <option disabled selected>Types</option>
+                            <option value="maison">Maison</option>
+                            <option value="appartement">Appartement</option>
+                            <option value="ferme">Ferme</option>
+                            <option value="chalet">Chalet</option>
+                          </select>
+                        </div>
+                      </li>
+                      <li class="dropdown__item" role="menuitem">
+                        <!-- Type -->
+                        <div class="rooms form-group">
+                          <label for="byRooms">Par chambres</label>
+                          <select
+                            name="rooms"
+                            class="form-control"
+                            id="byRooms"
+                          >
+                            <option value="all" selected>Peu importe</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5+">5+</option>
+                          </select>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filters__item filters__btn-map" role="menuitem">
+                <button
+                  class="btn btn-sm btn-secondary"
+                  type="button"
+                  id="toggleBtnMap"
+                  aria-pressed="false"
+                >
+                  <svg
+                    class="icon icon-map active"
+                    aria-label="Button map interactif"
+                  >
+                    <use xlink:href="#icon-map" />
+                  </svg>
+                  <svg
+                    class="icon icon-list"
+                    aria-label="Button liste des propriétés"
+                  >
+                    <use xlink:href="#icon-list" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </nav>
+        <!-- /end filters navbar -->
+      </aside>
+
+      <!-- Search content 
+      ======================================== -->
+      <section class="search__content">
+        <!-- Search results -->
+        <div class="search__results search__results--active">
+          <div class="search__list">
+            <!-- card new properties -->
+            <div class="card card--landscape">
+              <div class="card__header">
+                <img
+                  src="src/img/prop1-1@x1.jpg"
+                  alt=""
+                  class="card__img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__body card--landscape">
+                <span class="card__category">Maison unifamiliale</span>
+                <h3 class="card__title">Maison - LaSalle</h3>
+                <span class="card__address"
+                  >165 Strathyre LaSalle, QC H4R 3C2</span
+                >
+                <span class="card__price"><strong>350 000 $</strong></span>
+                <div
+                  class="characteristics card__characteristics card--landscape"
+                >
+                  <ul class="characteristics__list">
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--bedrooms"
+                        >4</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--bathrooms"
+                        >2</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--toilet-rooms"
+                        >1</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--living-area"
+                        >86 m<sup>2</sup></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a
+                  href="property-details.html"
+                  class="btn btn-sm btn-secondary card__btn card--landscape"
+                >
+                  Voire la fiche
+                </a>
+              </div>
+            </div>
+            <!-- /end card new properties -->
+            <!-- card new properties -->
+            <div class="card card--landscape">
+              <div class="card__header">
+                <img
+                  src="src/img/prop1-1@x1.jpg"
+                  alt=""
+                  class="card__img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__body card--landscape">
+                <span class="card__category">Maison unifamiliale</span>
+                <h3 class="card__title">Maison - LaSalle</h3>
+                <span class="card__address"
+                  >165 Strathyre LaSalle, QC H4R 3C2</span
+                >
+                <span class="card__price"><strong>350 000 $</strong></span>
+                <div
+                  class="characteristics card__characteristics card--landscape"
+                >
+                  <ul class="characteristics__list">
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--bedrooms"
+                        >4</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--bathrooms"
+                        >2</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--toilet-rooms"
+                        >1</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--living-area"
+                        >86 m<sup>2</sup></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a
+                  href="property-details.html"
+                  class="btn btn-sm btn-secondary card__btn card--landscape"
+                >
+                  Voire la fiche
+                </a>
+              </div>
+            </div>
+            <!-- /end card new properties -->
+            <!-- card new properties -->
+            <div class="card card--landscape">
+              <div class="card__header">
+                <img
+                  src="src/img/prop1-1@x1.jpg"
+                  alt=""
+                  class="card__img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__body card--landscape">
+                <span class="card__category">Maison unifamiliale</span>
+                <h3 class="card__title">Maison - LaSalle</h3>
+                <span class="card__address"
+                  >165 Strathyre LaSalle, QC H4R 3C2</span
+                >
+                <span class="card__price"><strong>350 000 $</strong></span>
+                <div
+                  class="characteristics card__characteristics card--landscape"
+                >
+                  <ul class="characteristics__list">
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--bedrooms"
+                        >4</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--bathrooms"
+                        >2</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--toilet-rooms"
+                        >1</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--living-area"
+                        >86 m<sup>2</sup></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a
+                  href="property-details.html"
+                  class="btn btn-sm btn-secondary card__btn card--landscape"
+                >
+                  Voire la fiche
+                </a>
+              </div>
+            </div>
+            <!-- /end card new properties -->
+            <!-- card new properties -->
+            <div class="card card--landscape">
+              <div class="card__header">
+                <img
+                  src="src/img/prop1-1@x1.jpg"
+                  alt=""
+                  class="card__img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__body card--landscape">
+                <span class="card__category">Maison unifamiliale</span>
+                <h3 class="card__title">Maison - LaSalle</h3>
+                <span class="card__address"
+                  >165 Strathyre LaSalle, QC H4R 3C2</span
+                >
+                <span class="card__price"><strong>350 000 $</strong></span>
+                <div
+                  class="characteristics card__characteristics card--landscape"
+                >
+                  <ul class="characteristics__list">
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--bedrooms"
+                        >4</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--bathrooms"
+                        >2</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--toilet-rooms"
+                        >1</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--living-area"
+                        >86 m<sup>2</sup></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a
+                  href="property-details.html"
+                  class="btn btn-sm btn-secondary card__btn card--landscape"
+                >
+                  Voire la fiche
+                </a>
+              </div>
+            </div>
+            <!-- /end card new properties -->
+            <!-- card new properties -->
+            <div class="card card--landscape">
+              <div class="card__header">
+                <img
+                  src="src/img/prop1-1@x1.jpg"
+                  alt=""
+                  class="card__img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__body card--landscape">
+                <span class="card__category">Maison unifamiliale</span>
+                <h3 class="card__title">Maison - LaSalle</h3>
+                <span class="card__address"
+                  >165 Strathyre LaSalle, QC H4R 3C2</span
+                >
+                <span class="card__price"><strong>350 000 $</strong></span>
+                <div
+                  class="characteristics card__characteristics card--landscape"
+                >
+                  <ul class="characteristics__list">
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--bedrooms"
+                        >4</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--bathrooms"
+                        >2</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--toilet-rooms"
+                        >1</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--living-area"
+                        >86 m<sup>2</sup></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a
+                  href="property-details.html"
+                  class="btn btn-sm btn-secondary card__btn card--landscape"
+                >
+                  Voire la fiche
+                </a>
+              </div>
+            </div>
+            <!-- /end card new properties -->
+            <!-- card new properties -->
+            <div class="card card--landscape">
+              <div class="card__header">
+                <img
+                  src="src/img/prop1-1@x1.jpg"
+                  alt=""
+                  class="card__img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__body card--landscape">
+                <span class="card__category">Maison unifamiliale</span>
+                <h3 class="card__title">Maison - LaSalle</h3>
+                <span class="card__address"
+                  >165 Strathyre LaSalle, QC H4R 3C2</span
+                >
+                <span class="card__price"><strong>350 000 $</strong></span>
+                <div
+                  class="characteristics card__characteristics card--landscape"
+                >
+                  <ul class="characteristics__list">
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--bedrooms"
+                        >4</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--bathrooms"
+                        >2</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--toilet-rooms"
+                        >1</span
+                      >
+                    </li>
+                    <li class="characteristics__item">
+                      <span
+                        class="characteristics__icon characteristics__icon--living-area"
+                        >86 m<sup>2</sup></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <a
+                  href="property-details.html"
+                  class="btn btn-sm btn-secondary card__btn card--landscape"
+                >
+                  Voire la fiche
+                </a>
+              </div>
+            </div>
+            <!-- /end card new properties -->
+          </div>
+        </div>
+        <!-- /end results -->
+
+        <!-- Search map -->
+        <aside class="map search__map" aria-label="Interactive google map">
+          <div class="map__container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63356.18690079542!2d-73.65747434718513!3d45.430018663853886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc916b6292e94df%3A0x2d0306ecf3da73d2!2s165%20Avenue%20Strathyre%2C%20LaSalle%2C%20QC%20H8R%203R2!5e0!3m2!1sen!2sca!4v1594183637408!5m2!1sen!2sca"
+              width="800"
+              height="600"
+              style="border: 0;"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+              title="An interactive map for looking to properties"
+            ></iframe>
+          </div>
+        </aside>
+        <!-- /end map -->
+      </section>
+    </main>
+
+    <!-- Footer
+      ========================================= -->
+    <footer class="page-footer">
+      <div class="container">
+        <h2 class="visuallyhidden">Bas de page</h2>
+        <div class="page-footer__list">
+          <nav
+            class="page-footer__item page-footer--faq"
+            aria-labelledby="menuFaq"
+          >
+            <h3 class="page-footer__title" id="menuFaq">
+              Vendre une propriete
+            </h3>
+            <ul>
+              <li><a href="#">Comment ca fonctionne?</a></li>
+              <li><a href="#">Combien ca coute?</a></li>
+              <li><a href="#">Combien pourriez-vous economiser?</a></li>
+              <li><a href="#">Options de paiement</a></li>
+            </ul>
+          </nav>
+
+          <nav
+            class="page-footer__item page-footer--buy-home"
+            aria-labelledby="menuAcheterPropriete"
+          >
+            <h3 class="page-footer__title" id="menuAcheterPropriete">
+              Acheter une propriete
+            </h3>
+            <ul>
+              <li><a href="#">Acheter une propriete</a></li>
+              <li><a href="#">Pourquoi acheter avec nous</a></li>
+              <li><a href="#">Comment ca fonctionne?</a></li>
+              <li><a href="#">Outils pour chercher une propriete</a></li>
+            </ul>
+          </nav>
+
+          <nav
+            class="page-footer__item page-footer--contact"
+            aria-labelledby="menuNousJoindre"
+          >
+            <h3 class="page-footer__title" id="menuNousJoindre">
+              Nous joindre
+            </h3>
+            <ul>
+              <li><span>Tel: 514 777 8888</span></li>
+              <li><span>33 rue Prince,</span></li>
+              <li><span>Montreal, QC, H3G 2M5</span></li>
+            </ul>
+          </nav>
+
+          <nav
+            class="page-footer__item page-footer--social-networks"
+            aria-labelledby="menuReseauxSociaux"
+          >
+            <h3 class="page-footer__title" id="menuReseauxSociaux">
+              Reseaux sociaux
+            </h3>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Youtube</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- /end footer info -->
+
+        <!-- Copyright -->
+        <div class="page-footer__copyright">
+          <p>©2020 PropDirect</p>
+          <p>
+            Developed by <a href="https://artysimple.com">Artiom Sinigur</a>
+          </p>
+        </div>
+      </div>
+      <!-- / end container -->
+    </footer>
+    <!--end Footer -->
+
+    <!-- Scripts -->
+    <script src="src/js/vendor/nouislider.js"></script>
+    <script type="module" src="src/js/navbar.js"></script>
+    <script src="src/js/navbar-filters.js"></script>
+    <script type="module" src="src/js/dropdown.js"></script>
+    <script src="src/js/price-noUiSlider.js"></script>
+  </body>
+</html>
