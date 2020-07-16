@@ -85,6 +85,13 @@
   }
 }
 
+// Breadcrumb
+.breadcrumb__details {
+  padding: 0 $gap;
+  margin-top: $gap;
+  margin-bottom: $gap;
+}
+
 // Gallery
 .gallery {
   display: flex;

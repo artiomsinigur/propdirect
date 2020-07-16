@@ -1,0 +1,43 @@
+.breadcrumb {
+  padding: rem(12) rem(24);
+  background-color: $color-gray01;
+
+  &__menu {
+    @include no-list-style;
+    line-height: 1;
+  }
+
+  &__link {
+    display: inline-flex;
+
+    a {
+      font-size: rem(16);
+      line-height: 1.5;
+      color: $color-black;
+
+      &:focus,
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    & + .breadcrumb__link::before {
+      display: inline-flex;
+      margin: 0 rem(6);
+      font-size: rem(16);
+      line-height: 1.5;
+      color: $color-gray04;
+      content: "/\00a0";
+    }
+  }
+
+  &__link [aria-current="page"] {
+    color: $color-gray04;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: $color-gray04;
+    }
+  }
+}
