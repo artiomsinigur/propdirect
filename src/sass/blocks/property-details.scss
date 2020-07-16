@@ -240,5 +240,9 @@
     &__thumbnails {
       max-width: rem(340);
     }
+
+    &__large-img {
+      width: calc(100% - 340px);
+    }
   }
 }

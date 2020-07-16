@@ -1478,7 +1478,9 @@ blockquote b {
     align-self: start;
     padding-top: 4.5rem; }
   .gallery__thumbnails {
-    max-width: 21.25rem; } }
+    max-width: 21.25rem; }
+  .gallery__large-img {
+    width: calc(100% - 340px); } }
 
 .card {
   display: inline-grid;
