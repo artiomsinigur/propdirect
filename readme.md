@@ -23,11 +23,10 @@ A simple service that link buyers and sellers directly without intermediaries.
 - Prototype Design with Figma and Illustrator
 - And more...
 
-### Later
-
-- ~~Database~~
-  - ~~MongoDB~~
-  - ~~Mongoose~~
-- ~~Server side~~
-  - ~~NodeJs~~
-  - ~~Express~~
+### Back-End
+- Database
+  - MongoDB
+  - Mongoose
+- Server side
+  - NodeJs
+  - Express
