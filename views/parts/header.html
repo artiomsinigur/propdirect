@@ -1,0 +1,72 @@
+<header class="page-header container">
+  <nav class="navbar" aria-label="Main Menu">
+    <!-- Logo -->
+    <div class="page-logo navbar__logo">
+      <a href="/">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="src/img/logo/logo-PropDirect.svg"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="src/img/logo/logo-PropDirect-mobile.svg"
+          />
+          <img
+            src="src/img/logo/logo-PropDirect.png"
+            loading="lazy"
+            alt="Logo PropDirect"
+          />
+        </picture>
+      </a>
+    </div>
+
+    <button
+      class="navbar-btn navbar__navbar-btn"
+      id="navbarBtn"
+      type="button"
+      aria-controls="navDropdown"
+      aria-expanded="false"
+    >
+      <span class="navbar-btn__wrap">
+        <span class="navbar-btn__line navbar-btn__line--top"></span>
+        <span class="navbar-btn__line navbar-btn__line--middle"></span>
+        <span class="navbar-btn__line navbar-btn__line--bottom"></span>
+      </span>
+    </button>
+
+    <div class="navbar__dropdown" id="navDropdown">
+      <!-- My account -->
+      <nav class="nav-account navbar__nav-account" aria-label="Account Menu">
+        <ul class="nav-account__menu" role="menu">
+          <li class="nav-account__item" role="menuitem">
+            <button class="btn btn-sm btn-secondary">
+              Créer un compte
+            </button>
+          </li>
+          <li class="nav-account__item" role="menuitem">
+            <a href="/">Mon espace</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Navbar top -->
+      <nav
+        class="nav-secondary navbar__nav-secondary"
+        aria-label="Secondary Menu"
+      >
+        <ul class="nav-secondary__menu" role="menu">
+          <li class="nav-secondary__item" role="menuitem">
+            <a href="/">Vendre</a>
+          </li>
+          <li class="nav-secondary__item" role="menuitem">
+            <a href="/">Blogue</a>
+          </li>
+          <li class="nav-secondary__item" role="menuitem">
+            <a href="/">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </nav>
+</header>

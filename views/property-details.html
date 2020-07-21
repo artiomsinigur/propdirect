@@ -1,0 +1,214 @@
+{% extends 'layouts/app.html' %} 
+  {% block main %}
+    <!-- Breadcrumb -->
+    <div class="breadcrumb__details container">
+      <nav
+        class="breadcrumb"
+        aria-label="Breadcrumb"
+      >
+        <ol class="breadcrumb__menu">
+          <li class="breadcrumb__link">
+            <a href="/app/propdirect">Accueil</a>
+          </li>
+          <li class="breadcrumb__link">
+            <a href="/app/propdirect/results.html">Résultats</a>
+          </li>
+          <li class="breadcrumb__link">
+            <a aria-current="page">Détails</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- Details 
+    ========================================== -->
+    <section class="details">
+      <h1 class="visuallyhidden">Détails de la propriété</h1>
+      <div class="container">
+        <article class="details__grid">
+          <!-- Gallery -->
+          <div class="gallery details__gallery">
+            <div class="gallery__large-img">
+              <img src="src/img/prop1@x2.jpg" alt="Property" />
+            </div>
+            <div class="gallery__thumbnails">
+              <div class="gallery__thumb">
+                <img src="src/img/prop1-2@x1.jpg" alt="Property 1" />
+              </div>
+              <div class="gallery__thumb">
+                <img src="src/img/prop1-3@x1.jpg" alt="Property 2" />
+              </div>
+            </div>
+          </div>
+          <!-- /end gallery -->
+
+          <span class="details--shape"></span>
+
+          <!-- Price -->
+          <div class="details__price">
+            <span class="details__price-amount"
+              ><strong>390 000 $</strong></span
+            >
+            <a
+              href=""
+              class="details__price-btn btn btn-primary"
+              role="button"
+              >Je suis intéressé</a
+            >
+          </div>
+          <!-- /end price -->
+
+          <!-- Rating -->
+          <div class="rating details__rating">
+            <div class="rating__avatar">
+              <img
+                src="src/img/avatar-profile.jpg"
+                alt="Jolie Lagueux"
+                loading="lazy"
+              />
+            </div>
+            <div class="rating__inner">
+              <h4 class="rating__author">Jolie Lagueux</h4>
+              <div class="rating__stars">
+                <span>
+                  <svg class="icon icon-star-fill" aria-label="Icon star 1">
+                    <use xlink:href="#icon-star-fill" />
+                  </svg>
+                </span>
+                <span>
+                  <svg class="icon icon-star-fill" aria-label="Icon star 2">
+                    <use xlink:href="#icon-star-fill" />
+                  </svg>
+                </span>
+                <span>
+                  <svg class="icon icon-star-fill" aria-label="Icon star 3">
+                    <use xlink:href="#icon-star-fill" />
+                  </svg>
+                </span>
+                <span>
+                  <svg class="icon icon-star-fill" aria-label="Icon star 4">
+                    <use xlink:href="#icon-star-fill" />
+                  </svg>
+                </span>
+                <span>
+                  <svg class="icon icon-star" aria-label="Icon star 5">
+                    <use xlink:href="#icon-star" />
+                  </svg>
+                </span>
+                <span class="rating__reviews">15 commentaires</span>
+              </div>
+            </div>
+          </div>
+          <!-- /end rating -->
+
+          <!-- Title -->
+          <h2 class="details__title">Détails de la propriété à vendre</h2>
+          <!-- /end title -->
+
+          <!-- Info -->
+          <div class="info details__info">
+            <div class="info__columns">
+              <div class="info__column">
+                <h2 class="info__title">Adresse</h2>
+                <span class="info__text"
+                  >420 - 422 Av. Strathyr, <br />
+                  Montréal, QC, H8R 3B3</span
+                >
+              </div>
+              <div class="info__column">
+                <h2 class="info__title">Type</h2>
+                <span class="info__text">Maison unifamilliale</span>
+              </div>
+              <div class="info__column">
+                <h2 class="info__title">Construction</h2>
+                <span class="info__text">2006</span>
+              </div>
+            </div>
+          </div>
+          <!-- /end info -->
+
+          <!-- Spec -->
+          <div class="accordion details__spec" id="accordionDetails">
+            <div class="accordion__card">
+              <h3 class="accordion__heading">
+                <button
+                  type="button"
+                  id="heading1"
+                  aria-expanded="true"
+                  aria-controls="panel1"
+                >
+                  Caractéristiques
+                  <span class="accordion__icons" aria-hidden="true">
+                    <svg class="icon icon-expand active">
+                      <use xlink:href="#icon-expand" />
+                    </svg>
+                    <svg class="icon icon-collapse">
+                      <use xlink:href="#icon-collapse" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel show"
+                id="panel1"
+                role="region"
+                aria-labelledby="heading1"
+              >
+                <table class="table">
+                  <tr>
+                    <td>Chambres</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>Salle de bain</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>Pieds carés</td>
+                    <td>80 m<sup>2</sup></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <!-- /end card -->
+            <div class="accordion__card">
+              <h3 class="accordion__heading">
+                <button
+                  type="button"
+                  id="heading2"
+                  aria-expanded="false"
+                  aria-controls="panel2"
+                >
+                  Description
+                  <span class="accordion__icons" aria-hidden="true">
+                    <svg class="icon icon-expand">
+                      <use xlink:href="#icon-expand" />
+                    </svg>
+                    <svg class="icon icon-collapse">
+                      <use xlink:href="#icon-collapse" />
+                    </svg>
+                  </span>
+                </button>
+              </h3>
+              <div
+                class="accordion__panel"
+                id="panel2"
+                role="region"
+                aria-labelledby="heading2"
+              >
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cumque corporis, nostrum eum doloremque, doloribus impedit
+                  ex numquam neque dolore error quasi amet incidunt enim
+                  aspernatur magni laboriosam quisquam ratione suscipit.
+                </p>
+              </div>
+            </div>
+            <!-- /end card -->
+          </div>
+          <!-- /end spec -->
+        </article>
+      </div>
+    </section>
+    <!-- /end details -->
+  {% endblock %}

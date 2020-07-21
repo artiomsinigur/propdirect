@@ -1,0 +1,548 @@
+{% extends 'layouts/app.html' %} 
+  {% block main %}
+  <!-- Hero
+  ======================================= -->
+  <section class="hero">
+    <h1 class="hero__title">
+      Acheter votre bien directement du proprietaire.
+    </h1>
+    <div class="hero__img"></div>
+
+    <!-- Search bar -->
+    <div class="search-bar hero__search-bar">
+      <div class="container">
+        <form action="/">
+          <div class="search-bar__grid">
+            <div class="search-bar__header">
+              <p class="search-bar__title"><strong>À vendre</strong></p>
+            </div>
+            <div class="search-bar__body">
+              <!-- Search -->
+              <div class="search-bar__search form-group">
+                <label for="search" class="visuallyhidden"
+                  >Recherche de propriété</label
+                >
+                <input
+                  type="search"
+                  class="form-control"
+                  id="search"
+                  placeholder="Recherchez par région, ville, rue"
+                />
+              </div>
+
+              <!-- Type -->
+              <div class="search-bar__select-type form-group">
+                <label for="selectType" class="visuallyhidden">Par type</label>
+                <select name="select-type" class="form-control" id="selectType">
+                  <option disabled selected>Types</option>
+                  <option value="maison">Maison</option>
+                  <option value="appartement">Appartement</option>
+                  <option value="ferme">Ferme</option>
+                  <option value="chalet">Chalet</option>
+                </select>
+              </div>
+
+              <!-- Price -->
+              <div class="price-range search-bar__price form-group">
+                <label class="visuallyhidden">Par prix</label>
+                <div
+                  id="nonlinear"
+                  class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr"
+                ></div>
+                <div>
+                  <input
+                    type="hidden"
+                    name="min_price"
+                    id="lower-input"
+                    value=""
+                  />
+                  <input
+                    type="hidden"
+                    name="max_price"
+                    id="upper-input"
+                    value=""
+                  />
+                  <div class="nonlinear-values">
+                    <span class="example-val" id="lower-value">500.00$</span>
+                    <span class="example-val" id="upper-value">7000.00$</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Send -->
+              <div class="search-bar__send">
+                <a href="results.html" class="btn btn-sm btn-primary">
+                  Chercher
+                </a>
+              </div>
+            </div>
+            <!-- /end search bar body -->
+          </div>
+          <!-- /end grid -->
+        </form>
+      </div>
+    </div>
+    <!-- /end search bar -->
+  </section>
+    <!-- Why Us
+    ======================================= -->
+    <section class="whyus">
+      <div class="container">
+        <h2 class="whyus__title">
+          Pourquoi les clients nous choisissent ?
+        </h2>
+        <div class="whyus__row">
+          <div class="whyus__col">
+            <article class="whyus__body">
+              <h3 class="whyus__subtitle whyus__subtitle--first">
+                Le numero 1 de l'immobilier entre particuliers
+              </h3>
+              <p class="whyus_text">
+                The standard chunk of Lorem Ipsum used since the 1500s is
+                reproduced below for those interested. Sections 1.10.32 and
+                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+                reproduced in their exact original form, accompanied by English
+                versions from the 1914 translation by H. Rackham.
+              </p>
+            </article>
+          </div>
+
+          <div class="whyus__col">
+            <article class="whyus__body">
+              <h3 class="whyus__subtitle whyus__subtitle--agreement">
+                Plus de 3000 accords conclu avec nous
+              </h3>
+              <p class="whyus__text">
+                The standard chunk of Lorem Ipsum used since the 1500s is
+                reproduced below for those interested. Sections 1.10.32 and
+                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+                reproduced in their exact original form, accompanied by English
+                versions from the 1914 translation by H. Rackham.
+              </p>
+            </article>
+          </div>
+
+          <div class="whyus__col">
+            <article class="whyus__body">
+              <h3 class="whyus__subtitle whyus__subtitle--piggy">
+                Nos clients ont economises plus de 45M $
+              </h3>
+              <p class="whyus__text">
+                The standard chunk of Lorem Ipsum used since the 1500s is
+                reproduced below for those interested. Sections 1.10.32 and
+                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+                reproduced in their exact original form, accompanied by English
+                versions from the 1914 translation by H. Rackham.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="whyus__btn">
+          <a class="btn btn-secondary" href="results.html"
+            >Je veux acheter une maison</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- /end whyus -->
+
+    <!-- Sold
+        ======================================= -->
+    <section class="sold">
+      <div class="container">
+        <h2 class="sold__title">Propriétés vendu récemment</h2>
+        <div class="sold__list">
+          <!-- card sold -->
+          <div class="card-sm sold__card-sm">
+            <span class="card-sm__label">Vendu</span>
+            <div class="card-sm__header">
+              <img
+                src="src/img/prop1@x1.jpg"
+                alt=""
+                class="card-sm__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-sm__body">
+              <p class="card-sm__category">Maison unifamiliale</p>
+              <h3 class="card-sm__title"><a href="">Maison - LaSalle</a></h3>
+              <span class="card-sm__price">460,000 $</span>
+            </div>
+          </div>
+          <!-- /end card-sm -->
+          <!-- card sold -->
+          <div class="card-sm sold__card-sm">
+            <span class="card-sm__label">Vendu</span>
+            <div class="card-sm__header">
+              <img
+                src="src/img/prop2@x1.jpg"
+                alt=""
+                class="card-sm__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-sm__body">
+              <p class="card-sm__category">Maison unifamiliale</p>
+              <h3 class="card-sm__title">Maison - LaSalle</h3>
+              <span class="card-sm__price">460,000 $</span>
+            </div>
+          </div>
+          <!-- /end card-sm -->
+          <!-- card sold -->
+          <div class="card-sm sold__card-sm">
+            <span class="card-sm__label">Vendu</span>
+            <div class="card-sm__header">
+              <img
+                src="src/img/prop3@x1.jpg"
+                alt=""
+                class="card-sm__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-sm__body">
+              <p class="card-sm__category">Maison unifamiliale</p>
+              <h3 class="card-sm__title">Maison - LaSalle</h3>
+              <span class="card-sm__price">460,000 $</span>
+            </div>
+          </div>
+          <!-- /end card-sm -->
+          <!-- card sold -->
+          <div class="card-sm sold__card-sm">
+            <span class="card-sm__label">Vendu</span>
+            <div class="card-sm__header">
+              <img
+                src="src/img/prop4@x1.jpg"
+                alt=""
+                class="card-sm__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="card-sm__body">
+              <p class="card-sm__category">Maison unifamiliale</p>
+              <h3 class="card-sm__title">Maison - LaSalle</h3>
+              <span class="card-sm__price">460,000 $</span>
+            </div>
+          </div>
+          <!-- /end card-sm -->
+        </div>
+      </div>
+    </section>
+    <!-- /end sold -->
+
+    <!-- New properties 
+        ===================================== -->
+    <section class="new-properties">
+      <div class="container">
+        <h2 class="new-properties__title">Nouvelles propriétés</h2>
+        <div class="new-properties__list">
+          <!-- card new properties -->
+          <div class="card new-properties__card">
+            <div class="card__header">
+              <img
+                src="src/img/prop1-1@x1.jpg"
+                alt=""
+                class="card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="card__body">
+              <span class="card__category">Maison unifamiliale</span>
+              <h3 class="card__title">Maison - LaSalle</h3>
+              <span class="card__address">165 Strathyre LaSalle, QC H4R 3C2</span>
+              <span class="card__price"><strong>350 000 $</strong></span>
+              <div class="characteristics card__characteristics">
+                <ul class="characteristics__list">
+                  <li class="characteristics__item">
+                    <span
+                      class="characteristics__icon characteristics__icon--bedrooms"
+                      >4</span
+                    >
+                  </li>
+                  <li class="characteristics__item">
+                    <span
+                      class="characteristics__icon characteristics__icon--bathrooms"
+                      >2</span
+                    >
+                  </li>
+                  <li class="characteristics__item">
+                    <span
+                      class="characteristics__icon characteristics__icon--toilet-rooms"
+                      >1</span
+                    >
+                  </li>
+                  <li class="characteristics__item">
+                    <span
+                      class="characteristics__icon characteristics__icon--living-area"
+                      >86 m<sup>2</sup></span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <a
+                href="property-details.html"
+                class="btn btn-sm btn-secondary card__btn"
+                type="button"
+              >
+                Voire la fiche
+              </a>
+            </div>
+          </div>
+          <!-- /end card new properties -->
+
+          <!-- card new properties -->
+          <div class="card new-properties__card">
+            <div class="card__header">
+              <img
+                src="src/img/prop1-2@x1.jpg"
+                alt=""
+                class="card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="card__body">
+              <span class="card__category">Maison unifamiliale</span>
+              <h3 class="card__title">Maison - LaSalle</h3>
+              <span class="card__address">165 Strathyre LaSalle, QC H4R 3C2</span>
+              <span class="card__price"><strong>350 000 $</strong></span>
+              <div class="characteristics card__characteristics">
+                <ul class="characteristics__list">
+                  <li class="characteristics__item">
+                    <span
+                      class="characteristics__icon characteristics__icon--bedrooms"
+                      >4</span
+                    >
+                  </li>
+                  <li class="characteristics__item">
+                    <span
+                      class="characteristics__icon characteristics__icon--bathrooms"
+                      >2</span
+                    >
+                  </li>
+                  <li class="characteristics__item">
+                    <span
+                      class="characteristics__icon characteristics__icon--toilet-rooms"
+                      >1</span
+                    >
+                  </li>
+                  <li class="characteristics__item">
+                    <span
+                      class="characteristics__icon characteristics__icon--living-area"
+                      >86 m<sup>2</sup></span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <a
+                href="property-details.html"
+                class="btn btn-sm btn-secondary card__btn"
+                type="button"
+              >
+                Voire la fiche
+              </a>
+            </div>
+          </div>
+          <!-- /end card new properties -->
+
+          <!-- card new properties -->
+          <div class="card new-properties__card">
+            <div class="card__header">
+              <img
+                src="src/img/prop1-3@x1.jpg"
+                alt=""
+                class="card__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="card__body">
+              <span class="card__category">Maison unifamiliale</span>
+              <h3 class="card__title">Maison - LaSalle</h3>
+              <span class="card__address">165 Strathyre LaSalle, QC H4R 3C2</span>
+              <span class="card__price"><strong>350 000 $</strong></span>
+              <div class="characteristics card__characteristics">
+                <ul class="characteristics__list">
+                  <li class="characteristics__item">
+                    <span
+                      class="characteristics__icon characteristics__icon--bedrooms"
+                      >4</span
+                    >
+                  </li>
+                  <li class="characteristics__item">
+                    <span
+                      class="characteristics__icon characteristics__icon--bathrooms"
+                      >2</span
+                    >
+                  </li>
+                  <li class="characteristics__item">
+                    <span
+                      class="characteristics__icon characteristics__icon--toilet-rooms"
+                      >1</span
+                    >
+                  </li>
+                  <li class="characteristics__item">
+                    <span
+                      class="characteristics__icon characteristics__icon--living-area"
+                      >86 m<sup>2</sup></span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <a
+                href="property-details.html"
+                class="btn btn-sm btn-secondary card__btn"
+                type="button"
+              >
+                Voire la fiche
+              </a>
+            </div>
+          </div>
+          <!-- /end card new properties -->
+        </div>
+      </div>
+    </section>
+    <!-- /end new-property -->
+
+    <!-- Testimonials 
+        ====================================== -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="testimonials__grid">
+          <span class="testimonials__bg"></span>
+          <h2 class="testimonials__title">Témoignages</h2>
+          <p class="testimonials__subtitle">
+            Plus de<br />
+            <strong>120,350</strong> membres<br />
+            ont acheté avec nous
+          </p>
+
+          <!-- Testimonials card -->
+          <blockquote class="testimonials__card">
+            <p class="testimonials__text">
+              Seamlessly incubate focused users after high-payoff processes.
+              Proactively leverage other's cross-platform total linkage and
+              holistic leadership skills.
+            </p>
+            <div class="testimonials__footer">
+              <img
+                class="testimonials__avatar"
+                src="src/img/avatar01.png"
+                alt="Céline Leroy"
+                loading="lazy"
+              />
+              <address class="testimonials__quote-attr">Céline Leroy</address>
+            </div>
+          </blockquote>
+          <!-- /end testimonials card -->
+
+          <!-- Testimonials card -->
+          <blockquote class="testimonials__card">
+            <p class="testimonials__text">
+              Seamlessly incubate focused users after high-payoff processes.
+              Proactively leverage other's cross-platform total linkage and
+              holistic leadership skills.
+            </p>
+            <div class="testimonials__footer">
+              <img
+                class="testimonials__avatar"
+                src="src/img/avatar02.png"
+                alt="Léon Perreault"
+                loading="lazy"
+              />
+              <address class="testimonials__quote-attr">
+                Léon Perreault
+              </address>
+            </div>
+          </blockquote>
+          <!-- /end testimonials card -->
+
+          <!-- Testimonials card -->
+          <blockquote class="testimonials__card">
+            <p class="testimonials__text">
+              Seamlessly incubate focused users after high-payoff processes.
+              Proactively leverage other's cross-platform total linkage and
+              holistic leadership skills.
+            </p>
+            <div class="testimonials__footer">
+              <img
+                class="testimonials__avatar"
+                src="src/img/avatar01.png"
+                alt="Céline Leroy"
+                loading="lazy"
+              />
+              <address class="testimonials__quote-attr">Céline Leroy</address>
+            </div>
+          </blockquote>
+          <!-- /end testimonials card -->
+
+          <!-- Testimonials card -->
+          <blockquote class="testimonials__card">
+            <p class="testimonials__text">
+              Seamlessly incubate focused users after high-payoff processes.
+              Proactively leverage other's cross-platform total linkage and
+              holistic leadership skills.
+            </p>
+            <div class="testimonials__footer">
+              <img
+                class="testimonials__avatar"
+                src="src/img/avatar02.png"
+                alt="Léon Perreault"
+                loading="lazy"
+              />
+              <address class="testimonials__quote-attr">
+                Léon Perreault
+              </address>
+            </div>
+          </blockquote>
+          <!-- /end testimonials card -->
+        </div>
+      </div>
+    </section>
+    <!-- /end testimonials -->
+
+    <!-- Additional information
+        ============================================-->
+    <aside class="additional-info" aria-labelledby="informationAdditionnelle">
+      <div class="container">
+        <h3 class="visuallyhidden" id="informationAdditionnelle">
+          Besoin de plus d'informations ?
+        </h3>
+        <ul class="additional-info__list">
+          <li class="additional-info__item additional-info__item--adviser">
+            <span>Gratuit</span> sessions d'information
+          </li>
+          <li class="additional-info__item additional-info__item--seminar">
+            <span>Gratuit</span> consultations
+          </li>
+          <li class="additional-info__item additional-info__item--video">
+            <span>Gratuit</span> leçons vidéo
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <!-- /end additional-info -->
+
+    <!-- Contact us
+        =========================================== -->
+    <section class="contact-us">
+      <div class="contact-us__bg-left">
+        <img
+          class="contact-us__img"
+          src="src/img/contact-us-bg-big.jpg"
+          alt="Contactez-nous maintenant"
+          loading="lazy"
+        />
+      </div>
+      <h2 class="visuallyhidden">Contactez-nous</h2>
+      <p class="contact-us__subtitle">
+        Vous voulez nous <strong>parler maintenant</strong> ?
+      </p>
+      <a href="tel:1-800-123-4567" class="contact-us__tel">1 800 123-4567</a>
+      <a href="chat:propdirect" class="contact-us__chat"
+        >Par messagerie instantanée</a
+      >
+      <span class="contact-us__rectangle-right"></span>
+      <!-- <div class="container">
+          </div> -->
+    </section>
+    <!-- end contact-us -->
+  {% endblock %}
