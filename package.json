@@ -31,7 +31,7 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "sharp": "^0.24.1",
-    "validator": "^12.2.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.10",
